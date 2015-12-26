@@ -1,0 +1,42 @@
+{
+  "name": "gulp-mspec-runner",
+  "version": "0.1.0",
+  "description": "A Gulp.js plugin to facilitate the running of MSpec tests on .Net assemblies.",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eugeneduvenage/gulp-mspec-runner.git"
+  },
+  "keywords": [
+    "gulp",
+    "mspec",
+    ".net",
+    "machine",
+    "specifications"
+  ],
+  "author": "Eugene Duvenage <eugene@eugeneduvenage.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eugeneduvenage/gulp-mspec-runner/issues"
+  },
+  "homepage": "https://github.com/eugeneduvenage/gulp-mspec-runner#readme",
+  "devDependencies": {
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-jasmine": "^2.2.1",
+    "gulp-jshint": "^2.0.0",
+    "jshint": "^2.8.0"
+  },
+  "dependencies": {
+    "event-stream": "^3.3.2",
+    "gulp-util": "^3.0.7",
+    "lodash": "^3.10.1"
+  }
+}

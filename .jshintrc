@@ -1,0 +1,13 @@
+{
+  "globals": { // Globals variables.
+        "require": true,
+        "jasmine": true,
+        "describe": true,
+        "beforeEach": true,
+        "expect": true,
+        "module": true,
+        "process": true,
+        "it": true
+    },
+    "globalstrict"  : true
+}
