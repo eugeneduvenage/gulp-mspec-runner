@@ -1,5 +1,9 @@
 # gulp-mspec-runner
 [![NPM version](http://img.shields.io/npm/v/gulp-mspec-runner.svg?style=flat)](http://npmjs.org/gulp-mspec-runner)
+[![NPM downloads](http://img.shields.io/npm/dm/gulp-mspec-runner.svg?style=flat)](http://npmjs.org/gulp-mspec-runner)
+[![Build Status](http://img.shields.io/travis/eugeneduvenage/gulp-mspec-runner/master.svg?style=flat)](https://travis-ci.org/eugeneduvenage/gulp-mspec-runner)
+[![Dependencies Status](http://img.shields.io/david/eugeneduvenage/gulp-mspec-runner.svg?style=flat)](https://david-dm.org/eugeneduvenage/gulp-mspec-runner)
+[![DevDependencies Status](http://img.shields.io/david/dev/eugeneduvenage/gulp-mspec-runner.svg?style=flat)](https://david-dm.org/eugeneduvenage/gulp-mspec-runner#info=devDependencies)
 
 A [Gulp.js](http://gulpjs.com/) plugin to facilitate running [MSpec](https://github.com/machine/machine.specifications) tests on .NET assemblies. Much of this work is based on the [gulp-nunit-runner](http://npmjs.org/gulp-nunit-runner) plugin.
 
