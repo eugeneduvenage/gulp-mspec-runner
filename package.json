@@ -1,6 +1,6 @@
 {
   "name": "gulp-mspec-runner",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Gulp.js plugin to facilitate the running of MSpec tests on .Net assemblies.",
   "main": "index.js",
   "scripts": {
@@ -32,11 +32,11 @@
     "gulp": "gulpjs/gulp#4.0",
     "gulp-jasmine": "^2.2.1",
     "gulp-jshint": "^2.0.0",
-    "jshint": "^2.8.0"
+    "jshint": "^2.9.1"
   },
   "dependencies": {
     "event-stream": "^3.3.2",
     "gulp-util": "^3.0.7",
-    "lodash": "^3.10.1"
+    "lodash": "^4.0.0"
   }
 }
