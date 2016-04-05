@@ -124,8 +124,6 @@ function run(stream, files, options) {
 	args = runner.getArguments(options, assemblies);
         console.log('theargs');
         console.log(args);
-        console.log('thestream');
-        console.log(stream);
 
 	child = child_process.spawn(exe, args, opts);
 
@@ -144,6 +142,7 @@ function run(stream, files, options) {
 			if (code !== 0) {
 				gutil.log(gutil.colors.red('Machine Specification tests failed.'));
 				fail(stream, 'Machine Specification tests failed.');
+				console.log('failed failed failed');
 			} else {
 				gutil.log(gutil.colors.cyan('Machine Specification tests passed'));
 			}
