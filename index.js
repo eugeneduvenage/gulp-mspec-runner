@@ -124,10 +124,11 @@ function run(stream, files, options) {
 	args = runner.getArguments(options, assemblies);
         console.log('theargs');
         console.log(args);
-        console.log('theopts');
-        console.log(opts);        
-	child = child_process.spawn(exe, args, opts);
 
+	child = child_process.spawn(exe, args, opts);
+	child.stdout.on('data', function (data) {
+	  console.log('stdout: ' + data);
+	});
 	child.on('error', function (e) {
         	console.log('error');
         	console.log(e);		
@@ -135,6 +136,8 @@ function run(stream, files, options) {
 		});
 
 	child.on('close', function (code) {
+        	console.log('close');
+        	console.log(code);			
 			if (cleanupTempFiles) {
 				cleanupTempFiles();
 			}
