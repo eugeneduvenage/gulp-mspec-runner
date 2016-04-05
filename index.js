@@ -125,8 +125,14 @@ function run(stream, files, options) {
         console.log('theargs');
         console.log(args);
 
+        try {
 	child = child_process.spawn(exe, args, opts);
-	child.stdout.on('data', function (data) {
+        } catch(err) {
+        	console.log('exception');
+        	console.log(err);
+        
+        }
+	child.on('data', function (data) {
 	  console.log('stdout: ' + data);
 	});
 	child.on('error', function (e) {
