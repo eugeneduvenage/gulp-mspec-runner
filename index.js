@@ -124,17 +124,11 @@ function run(stream, files, options) {
 	args = runner.getArguments(options, assemblies);
         console.log('theargs');
         console.log(args);
+        console.log('thestream');
+        console.log(stream);
 
-        try {
 	child = child_process.spawn(exe, args, opts);
-        } catch(err) {
-        	console.log('exception');
-        	console.log(err);
-        
-        }
-	child.on('data', function (data) {
-	  console.log('stdout: ' + data);
-	});
+
 	child.on('error', function (e) {
         	console.log('error');
         	console.log(e);		
