@@ -14,8 +14,6 @@ var _ = require('lodash'),
 
 // Main entry point
 runner = function gulpMSpecRunner(opts) {
-	console.log('gulpMSpecRunner');
-	console.log(opts);
 		var stream,
 		files;
 		opts = opts || {};
@@ -37,8 +35,6 @@ runner = function gulpMSpecRunner(opts) {
 	};
 
 runner.getExecutable = function (options) {
-	console.log('getExecutable');
-	console.log(options);	
 		var executable,
 		consoleRunner;
 		consoleRunner = options.platform === 'x86' ? MSPEC_X86_CONSOLE : MSPEC_CONSOLE;
@@ -52,9 +48,6 @@ runner.getExecutable = function (options) {
 	};
 
 runner.getArguments = function (options, assemblies) {
-	console.log('getArguments');
-	console.log(options);		
-	console.log(assemblies);
 		var args = [];
 
 		if (options.options) {
@@ -126,11 +119,18 @@ function run(stream, files, options) {
 		};
 
 	exe = runner.getExecutable(options);
+	console.log('the exe');
+	console.log(exe);
 	args = runner.getArguments(options, assemblies);
-
+        console.log('theargs');
+        console.log(args);
+        console.log('theopts');
+        console.log(opts);        
 	child = child_process.spawn(exe, args, opts);
 
 	child.on('error', function (e) {
+        	console.log('error');
+        	console.log(e);		
 			fail(stream, e.code === 'ENOENT' ? 'Unable to find \'' + exe + '\'.' : e.message);
 		});
 
