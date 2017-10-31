@@ -76,7 +76,7 @@ function parseSwitches(options) {
 				return (switchChar + key + ':' + qualifier + val + qualifier);
 			}
 			if (val instanceof Array) {
-				return (switchChar + key + ':' + val.join(','));
+				return [(switchChar + key), val.join(',')];
 			}
 		});
 
@@ -84,7 +84,7 @@ function parseSwitches(options) {
 			return !_.isUndefined(val);
 		});
 
-		return filtered;
+		return _.flatten(filtered);
 	}
 
 function fail(stream, msg) {
