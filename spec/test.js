@@ -115,7 +115,7 @@
 
         expect(mspec.getArguments(opts, [])).toDeepEqual(
           [
-            switchChar + 'exclude:Acceptance,Integration'
+            switchChar + 'exclude', 'Acceptance,Integration'
           ]);
       });
     });
